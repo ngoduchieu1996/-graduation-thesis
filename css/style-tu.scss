@@ -2,11 +2,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: none;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     margin: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
@@ -15,7 +24,7 @@ header {
     padding: 30px;
 }
 
-a.logo {
+.logo {
     display: flex;
     width: 15%;
     height: auto;
@@ -26,7 +35,7 @@ a.logo {
 }
 
 
-ul.nav-bar {
+.nav-bar {
     display: flex;
     list-style: none;
     border-right: 1px solid rgb(223, 223, 223);
@@ -56,4 +65,85 @@ ul.nav-bar {
 
 .search-shop a {
     padding: 5px;
+}
+
+.home {
+    .home-drop {
+        position: absolute;
+        width: 80%;
+        transform: translate(-31%, 0%);
+        display: flex;
+        visibility: hidden;
+        z-index: 1;
+        margin-top: 30px;
+        visibility: hidden;
+        
+        
+        div {
+            width: 25%;
+            padding: 0 10px;
+            margin: 20px 0;
+        }
+    
+        .business, .announcement, .invitation {
+            border-right: 1px solid gray;
+        }
+    
+        .title ~ a {
+            font-size: 13px;
+            color: gray;
+        }
+    }
+}
+
+.home:hover .home-drop {
+    visibility: visible;
+    margin-top: 0;
+    transition: .2s;
+}
+
+.page {
+    .page-drop {
+        position: absolute;
+        visibility: hidden;
+        line-height: 2;
+        margin-top: 30px;
+        font-size: 13px;
+        color: gray;
+    }
+}
+
+.page:hover .page-drop {
+    visibility: visible;
+    transition: .3s;
+    margin-top: 0;
+}
+
+.portfolio-drop {
+    visibility: hidden;
+    margin-top: 30px;
+    position: absolute;
+    line-height: 2;
+    a {
+        display: flex;
+        justify-content: space-between ;
+        align-items: center;
+        width: 200px;
+    }
+
+    img {
+        width: 10%;
+        height: 10%;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 13px;
+    }
+} 
+
+.portfolio:hover .portfolio-drop {
+    transition: 0.3s;
+    visibility: visible;
+    margin-top: 0 ;
 }

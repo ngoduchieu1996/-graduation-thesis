@@ -3,11 +3,20 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   margin: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -20,7 +29,7 @@ header {
   padding: 30px;
 }
 
-a.logo {
+.logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,12 +37,12 @@ a.logo {
   height: auto;
 }
 
-a.logo img {
+.logo img {
   width: 100%;
   height: 35px;
 }
 
-ul.nav-bar {
+.nav-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,5 +77,94 @@ ul.nav-bar {
 
 .search-shop a {
   padding: 5px;
+}
+
+.home .home-drop {
+  position: absolute;
+  width: 80%;
+  -webkit-transform: translate(-31%, 0%);
+          transform: translate(-31%, 0%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  z-index: 1;
+  margin-top: 30px;
+  visibility: hidden;
+}
+
+.home .home-drop div {
+  width: 25%;
+  padding: 0 10px;
+  margin: 20px 0;
+}
+
+.home .home-drop .business, .home .home-drop .announcement, .home .home-drop .invitation {
+  border-right: 1px solid gray;
+}
+
+.home .home-drop .title ~ a {
+  font-size: 13px;
+  color: gray;
+}
+
+.home:hover .home-drop {
+  visibility: visible;
+  margin-top: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.page .page-drop {
+  position: absolute;
+  visibility: hidden;
+  line-height: 2;
+  margin-top: 30px;
+  font-size: 13px;
+  color: gray;
+}
+
+.page:hover .page-drop {
+  visibility: visible;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-top: 0;
+}
+
+.portfolio-drop {
+  visibility: hidden;
+  margin-top: 30px;
+  position: absolute;
+  line-height: 2;
+}
+
+.portfolio-drop a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+}
+
+.portfolio-drop img {
+  width: 10%;
+  height: 10%;
+}
+
+.portfolio-drop p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.portfolio:hover .portfolio-drop {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  visibility: visible;
+  margin-top: 0;
 }
 /*# sourceMappingURL=style-tu.css.map */
