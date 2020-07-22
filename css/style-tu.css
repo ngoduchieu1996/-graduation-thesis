@@ -4,11 +4,7 @@
   margin: 0;
   padding: 0;
   outline: none;
-}
-
-body {
   font-family: 'Poppins', sans-serif;
-  margin: auto;
 }
 
 li {
@@ -17,6 +13,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+li > a {
+  font-size: 15px;
 }
 
 header {
@@ -87,7 +87,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  visibility: hidden;
   z-index: 1;
   margin-top: 30px;
   visibility: hidden;
@@ -106,6 +105,10 @@ header {
 .home .home-drop .title ~ a {
   font-size: 13px;
   color: gray;
+}
+
+.title {
+  font-size: 15px;
 }
 
 .home:hover .home-drop {
@@ -166,5 +169,73 @@ header {
   transition: 0.3s;
   visibility: visible;
   margin-top: 0;
+}
+
+.shop-drop {
+  right: 510px;
+  font-size: 13px;
+  position: absolute;
+  text-align: right;
+  visibility: hidden;
+  margin-top: 30px;
+  line-height: 2;
+}
+
+.shop:hover .shop-drop {
+  visibility: visible;
+  margin-top: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.blog-drop {
+  font-size: 13px;
+  position: absolute;
+  text-align: right;
+  visibility: hidden;
+  margin-top: 30px;
+  line-height: 2;
+  right: 425px;
+}
+
+.blog:hover .blog-drop {
+  visibility: visible;
+  margin-top: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.elements-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 80%;
+  -webkit-transform: translate(-70%, 7%);
+          transform: translate(-70%, 7%);
+  margin-top: 30px;
+  visibility: hidden;
+}
+
+.elements-drop div {
+  width: 25%;
+}
+
+.elements-drop div ul a {
+  font-size: 13px;
+  color: gray;
+}
+
+.elements-drop div ul a img {
+  width: 13px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.elements:hover .elements-drop {
+  visibility: visible;
+  margin-top: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 /*# sourceMappingURL=style-tu.css.map */

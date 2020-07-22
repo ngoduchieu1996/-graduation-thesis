@@ -3,12 +3,9 @@
     margin: 0;
     padding: 0;
     outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: auto;
-}
 
 li {
     list-style: none;
@@ -16,6 +13,10 @@ li {
 
 a {
     text-decoration: none;
+}
+
+li > a {
+    font-size: 15px;
 }
 
 header {
@@ -73,7 +74,6 @@ header {
         width: 80%;
         transform: translate(-31%, 0%);
         display: flex;
-        visibility: hidden;
         z-index: 1;
         margin-top: 30px;
         visibility: hidden;
@@ -94,6 +94,10 @@ header {
             color: gray;
         }
     }
+}
+
+.title {
+    font-size: 15px;
 }
 
 .home:hover .home-drop {
@@ -146,4 +150,71 @@ header {
     transition: 0.3s;
     visibility: visible;
     margin-top: 0 ;
+}
+
+@mixin drop-right {
+    font-size: 13px;
+    position: absolute;
+    text-align: right;
+    visibility: hidden;
+    margin-top: 30px;
+    line-height: 2;
+}
+
+.shop {
+    &-drop {
+        
+        right: 510px;
+        @include drop-right();
+    }
+}
+
+.shop:hover .shop-drop {
+        visibility: visible;
+        margin-top: 0;
+        transition: .3s;
+}
+
+
+
+@mixin effect-drop {
+    visibility: visible;
+    margin-top: 0;
+    transition: .3s;
+}
+
+.blog {
+    &-drop {
+        @include drop-right();
+        right: 425px;
+    }
+}
+
+.blog:hover .blog-drop {
+    @include effect-drop();
+}
+
+.elements-drop {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    transform: translate(-70%, 7%);
+    margin-top: 30px;
+    visibility: hidden;
+    div {
+        width: 25%;
+        ul a {
+            font-size: 13px;
+            color: gray;
+            img {
+                width: 13px;
+                height: auto;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.elements:hover .elements-drop {
+    @include effect-drop();
 }
