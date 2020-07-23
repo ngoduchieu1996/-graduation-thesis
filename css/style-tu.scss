@@ -47,7 +47,6 @@ header {
     text-decoration: none;
     display: block;
     padding: 5px 20px;
-    color: black;
 }
 
 
@@ -64,17 +63,21 @@ header {
     padding: 5px;
 }
 
+@mixin up-bg {
+    background-color: white;
+    z-index: 1;
+}
+
 .home {
     .home-drop {
         position: absolute;
-        width: 100%;
-        left: 0;
+        width: 70%;
+        left: 15%;
         display: flex;
-        z-index: 1;
         margin-top: 30px;
         visibility: hidden;
-        padding: 0 70px;
-        
+        background-color: white;
+        @include up-bg();
         div {
             width: 25%;
             padding: 0 10px;
@@ -93,6 +96,7 @@ header {
 }
 
 .title {
+    color: black;
     font-size: 15px;
 }
 
@@ -109,6 +113,7 @@ header {
         line-height: 2;
         margin-top: 30px;
         color: gray;
+        @include up-bg();
         a {
             font-size: 13px;
         }
@@ -126,7 +131,8 @@ header {
     margin-top: 30px;
     position: absolute;
     line-height: 2;
-    
+    @include up-bg();
+
     a {
         display: flex;
         justify-content: space-between ;
@@ -161,6 +167,7 @@ header {
     line-height: 2;
     visibility: hidden;
     width: 150px;
+    @include up-bg();
 }
 
 .shop {
@@ -187,6 +194,7 @@ header {
     &-drop {
         @extend .shop-drop;
         width: 200px;
+        @include up-bg();
     }
 }
 
@@ -195,13 +203,16 @@ header {
 }
 
 .elements-drop {
-    display: flex;
     position: absolute;
-    width: 100%;
+    width: 70%;
+    left: 15%;
+    display: flex;
     margin-top: 30px;
     visibility: hidden;
-    left: 0;
-    padding: 0 100px;
+    background-color: white;
+    @include up-bg();
+    padding: 30px 0;
+
     div {
         width: 25%;
         ul a {
@@ -286,3 +297,73 @@ footer {
 }
 
 //footer end
+
+//slide image
+
+#fade-img {
+    height: 567px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.carousel-inner {
+    height: 100%;
+    .carousel-item {
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+        
+        
+
+        .content-img {
+            padding-bottom: 120px;
+            .title-img {
+                font-size: 70px;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            .title-img:first-child {
+                position: relative;
+                top: 30px;
+            }
+
+            
+        }
+}}
+
+.content-img p:nth-child(3) {
+    padding: 0px 180px;
+}
+
+//start now
+
+.start-now {
+    text-align: center;
+    padding-top: 120px;
+    min-height: 600px;
+    background: #f5f5f5;
+
+    p {
+        color: gray;
+    }
+
+    .circle {
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+        margin-top: 60px;
+        
+        div {
+            width: 25%;
+            margin-right: 30px;
+        }
+
+        img {
+            margin-bottom: 40px;
+        }
+    }
+}
