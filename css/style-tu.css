@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: 'Poppins', sans-serif;
 }
 
 li {
@@ -15,10 +14,6 @@ a {
   text-decoration: none;
 }
 
-li > a {
-  font-size: 15px;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,20 +21,17 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px;
+  padding: 30px 70px 0;
 }
 
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 15%;
   height: auto;
 }
 
 .logo img {
   width: 100%;
-  height: 35px;
+  height: auto;
 }
 
 .nav-bar {
@@ -54,7 +46,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
+  max-width: 70%;
 }
 
 .nav-bar a {
@@ -81,15 +73,15 @@ header {
 
 .home .home-drop {
   position: absolute;
-  width: 80%;
-  -webkit-transform: translate(-31%, 0%);
-          transform: translate(-31%, 0%);
+  width: 100%;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 1;
   margin-top: 30px;
   visibility: hidden;
+  padding: 0 70px;
 }
 
 .home .home-drop div {
@@ -123,8 +115,11 @@ header {
   visibility: hidden;
   line-height: 2;
   margin-top: 30px;
-  font-size: 13px;
   color: gray;
+}
+
+.page .page-drop a {
+  font-size: 13px;
 }
 
 .page:hover .page-drop {
@@ -171,31 +166,34 @@ header {
   margin-top: 0;
 }
 
-.shop-drop {
-  right: 510px;
+.shop-drop, .blog-drop {
+  right: 0;
   font-size: 13px;
   position: absolute;
   text-align: right;
-  visibility: hidden;
   margin-top: 30px;
   line-height: 2;
+  visibility: hidden;
+  width: 150px;
 }
 
-.shop:hover .shop-drop {
+.shop {
+  position: relative;
+}
+
+.shop:hover .shop-drop, .shop:hover .blog-drop {
   visibility: visible;
   margin-top: 0;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
+.blog {
+  position: relative;
+}
+
 .blog-drop {
-  font-size: 13px;
-  position: absolute;
-  text-align: right;
-  visibility: hidden;
-  margin-top: 30px;
-  line-height: 2;
-  right: 425px;
+  width: 200px;
 }
 
 .blog:hover .blog-drop {
@@ -210,11 +208,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  width: 80%;
-  -webkit-transform: translate(-70%, 7%);
-          transform: translate(-70%, 7%);
+  width: 100%;
   margin-top: 30px;
   visibility: hidden;
+  left: 0;
+  padding: 0 100px;
 }
 
 .elements-drop div {
@@ -232,10 +230,86 @@ header {
   margin-right: 5px;
 }
 
+.elements-drop .typography, .elements-drop .infographics, .elements-drop .s-elements {
+  border-right: 1px solid lightgray;
+}
+
 .elements:hover .elements-drop {
   visibility: visible;
   margin-top: 0;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Raleway,sans-serif;
+  margin-bottom: 50px;
+  background: #f1f1f1;
+  padding: 0 70px;
+}
+
+footer > div {
+  width: 25%;
+  padding-right: 50px;
+}
+
+footer .contact {
+  color: #949494;
+}
+
+footer .contact img[alt=logo] {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+footer a, footer .subcribe p {
+  color: #949494;
+}
+
+footer a:hover {
+  color: #949494;
+}
+
+footer h6 {
+  font-weight: 600;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+footer h6 ~ a {
+  display: block;
+  line-height: 2.5;
+}
+
+footer input {
+  border: none;
+  padding-left: 20px;
+  height: 45px;
+}
+
+footer .send-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .send-email .send {
+  display: block;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #4ff3ff;
 }
 /*# sourceMappingURL=style-tu.css.map */
