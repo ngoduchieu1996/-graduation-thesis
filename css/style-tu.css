@@ -591,4 +591,51 @@ footer .send-email .send {
   width: 100%;
   height: auto;
 }
+
+.show-off {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 130px;
+}
+
+.show-off > p {
+  margin-bottom: 50px;
+  color: gray;
+  font-weight: 400;
+}
+
+.show-off h3 {
+  font-weight: 400;
+}
+
+.show-off .people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.show-off .people div {
+  width: 30%;
+  text-align: center;
+}
+
+.show-off .people div img:first-child {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.show-off .people div p {
+  margin-bottom: 0;
+}
+
+.show-off .people div .name {
+  font-weight: 600;
+}
+
+.show-off .people div .name + p {
+  color: #b1b1b1;
+}
 /*# sourceMappingURL=style-tu.css.map */

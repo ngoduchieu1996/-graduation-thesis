@@ -543,3 +543,43 @@ footer {
         }
     }
 }
+
+.show-off {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 130px;
+    > p {
+        margin-bottom: 50px;
+        color: gray;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-weight: 400;
+    }
+
+    .people {
+        display: flex;
+        justify-content: center;
+        div {
+            width: 30%;
+            text-align: center;
+            img:first-child {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+    
+            p {
+                margin-bottom: 0;
+            }
+    
+            .name {
+                font-weight: 600;
+            }
+    
+            .name + p {
+                color: rgb(177, 177, 177);
+            }
+        }
+    }
+}
