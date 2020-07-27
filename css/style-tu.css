@@ -575,20 +575,60 @@ footer .send-email .send {
 }
 
 .cell-art {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .cell-art a {
   padding: 0;
+  position: relative;
 }
 
 .cell-art a img {
   width: 100%;
   height: auto;
+}
+
+.cell-art a div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cell-art a div p {
+  margin-bottom: 0;
+}
+
+.cell-art a div .bold {
+  color: black;
+  font-weight: 700;
+}
+
+.cell-art a div .bold + p {
+  color: gray;
+}
+
+.cell-art a:hover img {
+  opacity: .3;
+}
+
+.cell-art a:hover div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .show-off {
