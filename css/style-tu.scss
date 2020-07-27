@@ -535,8 +535,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     a {
-        display: block;
-        width: 25%;
+        padding: 0;
+        
         img {
             width: 100%;
             height: auto;
