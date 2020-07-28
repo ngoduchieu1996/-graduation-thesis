@@ -487,33 +487,50 @@ footer {
     }
 
     &-table {
+        p {
+            margin-bottom: 5px;
+        }
+
+        .title {
+            margin-bottom: 20px;
+        }
+
         .slide {
             width: 100%;
             height: 20px;
             background-color: rgb(235, 235, 235);
             position: relative;
+            .number-slide {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 75%, 50% 90%, 40% 75%, 0% 75%);
+                height: 25px;
+                background: rgba(255, 202, 212, 0.705);
+                width: 25px;
+                position: absolute;
+                transform: translate(-50%,0%);
+                animation: example1 5s;
+                bottom: 20px;
+            }
+
+            &-bar {
+                position: absolute;
+                height: 20px;
+                background: rgba(255, 202, 212, 0.705);
+                left: 0;
+                animation: example 5s ;
+            }
+
+            .bar-85 {
+                width: 85%;
+            }
+
+            .number-85 {
+                left: 85%;
+            }
         }
 
-        .slide::after {
-            content: "";
-            position: absolute;
-            width: 75%;
-            height: 20px;
-            background: rgba(255, 202, 212, 0.705);
-            left: 0;
-            animation: example 2s linear;
-        }
+        
 
-        .number-slide {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 75%, 50% 90%, 40% 75%, 0% 75%);
-            height: 25px;
-            background: rgba(255, 202, 212, 0.705);
-            width: 25px;
-            position: relative;
-            transform: translate(-50%,0%);
-            animation: example1 2s linear;
-            left: 75%;
-        }
+        
     }
 }
 
@@ -595,14 +612,12 @@ footer {
         font-weight: 400;
     }
 
-    .people {
-        display: flex;
-        justify-content: center;
+    
         div {
-            width: 30%;
+            justify-content: center;
             text-align: center;
             img:first-child {
-                width: 90%;
+                width: 100%;
                 margin-bottom: 20px;
             }
     
@@ -619,7 +634,7 @@ footer {
             }
         }
     }
-}
+
 
 .beautiful-2 {
     text-align: center;
@@ -646,16 +661,27 @@ footer {
                     border: 1px solid;
                     cursor: pointer;
                     padding: 15px 25px;
-                    color: black;
+                    color: gray;
+                    font-weight: 500;
+                    transition: .2;
 
                     a:hover {
                         text-decoration: none;
                     }
                     }
+
+                td:hover {
+                    color: black;
+                }
+
+                .click {
+                    color: black;
+                }
             }
 
             .content-text {
                 display: none;
+                transition: .2;
             }
 
             .active {
@@ -731,20 +757,25 @@ footer {
 
 .adorable {
     &-content {
-
-         > div {
+        width: 80%;
+        > div {
             width: 50%;
             display: flex;
 
-            img {
-                display: inline-block;
+            .pic {
                 width: 50%;
-                height: auto;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
             }
 
             .content {
+                width: 50%;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                padding: 10px 20px;
             }
         }
 
