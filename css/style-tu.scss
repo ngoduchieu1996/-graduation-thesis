@@ -630,24 +630,39 @@ footer {
         display: flex;
         padding-top: 70px;
 
-        div {
+        &-img {
+            img {
+                width: 400px;
+                height: auto;
+            }
+        }
+
+        &-tb  {
             padding-left: 70px;
         
             table {
                 margin-bottom: 30px;
                 td {
                     border: 1px solid;
-                    a {
-                        padding: 15px 25px;
-                        display: block;
-                        color: black;
-                        }
+                    cursor: pointer;
+                    padding: 15px 25px;
+                    color: black;
 
                     a:hover {
                         text-decoration: none;
                     }
                     }
             }
+
+            .content-text {
+                display: none;
+            }
+
+            .active {
+                display: block;
+            }
+
+        
             }
 
             p {
@@ -868,5 +883,39 @@ footer {
     p {
         color: gray;
         margin-bottom: 50px;
+    }
+}
+
+#feedback {
+    height: 550px;
+    .carousel-inner {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../image/adorable/cover-box-image-2.jpg);
+        background-size: cover;
+
+        .carousel-item {
+            
+            .flex {
+                display: flex;
+                padding: 10%;
+                text-align: center;
+                
+                p {
+                    color: white;
+                }
+
+                .title {
+                    font-weight: 600;
+                }
+
+                div {
+                    padding: 0 10px;
+                }
+            }
+
+            img {
+                width: 64px;
+                height: auto;
+            }
+        }
     }
 }

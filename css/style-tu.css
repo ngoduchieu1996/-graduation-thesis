@@ -691,26 +691,36 @@ footer .send-email .send {
   padding-top: 70px;
 }
 
-.beautiful-2 .b2-content div {
+.beautiful-2 .b2-content-img img {
+  width: 400px;
+  height: auto;
+}
+
+.beautiful-2 .b2-content-tb {
   padding-left: 70px;
 }
 
-.beautiful-2 .b2-content div table {
+.beautiful-2 .b2-content-tb table {
   margin-bottom: 30px;
 }
 
-.beautiful-2 .b2-content div table td {
+.beautiful-2 .b2-content-tb table td {
   border: 1px solid;
-}
-
-.beautiful-2 .b2-content div table td a {
+  cursor: pointer;
   padding: 15px 25px;
-  display: block;
   color: black;
 }
 
-.beautiful-2 .b2-content div table td a:hover {
+.beautiful-2 .b2-content-tb table td a:hover {
   text-decoration: none;
+}
+
+.beautiful-2 .b2-content-tb .content-text {
+  display: none;
+}
+
+.beautiful-2 .b2-content-tb .active {
+  display: block;
 }
 
 .beautiful-2 .b2-content p {
@@ -944,5 +954,40 @@ footer .send-email .send {
 .ready p {
   color: gray;
   margin-bottom: 50px;
+}
+
+#feedback {
+  height: 550px;
+}
+
+#feedback .carousel-inner {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../image/adorable/cover-box-image-2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../image/adorable/cover-box-image-2.jpg);
+  background-size: cover;
+}
+
+#feedback .carousel-inner .carousel-item .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10%;
+  text-align: center;
+}
+
+#feedback .carousel-inner .carousel-item .flex p {
+  color: white;
+}
+
+#feedback .carousel-inner .carousel-item .flex .title {
+  font-weight: 600;
+}
+
+#feedback .carousel-inner .carousel-item .flex div {
+  padding: 0 10px;
+}
+
+#feedback .carousel-inner .carousel-item img {
+  width: 64px;
+  height: auto;
 }
 /*# sourceMappingURL=style-tu.css.map */
