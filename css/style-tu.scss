@@ -502,9 +502,9 @@ footer {
             position: relative;
             .number-slide {
                 clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 75%, 50% 90%, 40% 75%, 0% 75%);
-                height: 25px;
+                height: 30px;
                 background: rgba(255, 202, 212, 0.705);
-                width: 25px;
+                width: 35px;
                 position: absolute;
                 transform: translate(-50%,0%);
                 animation: example1 5s;
@@ -525,7 +525,35 @@ footer {
 
             .number-85 {
                 left: 85%;
+                text-align: center;
             }
+
+            .bar-60 {
+                width: 60%;
+            }
+
+            .number-60 {
+                left: 60%;
+                text-align: center;
+            }
+
+            .bar-75 {
+                width: 75%;
+            }
+
+            .number-75 {
+                left: 75%;
+                text-align: center;
+            }
+
+            .bar-90 {
+                width: 90%;
+            }
+
+            .number-90 {
+                left: 90%;
+                text-align: center;
+        
         }
 
         

@@ -536,9 +536,9 @@ footer .send-email .send {
 .stylist-table .slide .number-slide {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 75%, 50% 90%, 40% 75%, 0% 75%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 75%, 50% 90%, 40% 75%, 0% 75%);
-  height: 25px;
+  height: 30px;
   background: rgba(255, 202, 212, 0.705);
-  width: 25px;
+  width: 35px;
   position: absolute;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
@@ -562,6 +562,25 @@ footer .send-email .send {
 
 .stylist-table .slide .number-85 {
   left: 85%;
+  text-align: center;
+}
+
+.stylist-table .slide .bar-60 {
+  width: 60%;
+}
+
+.stylist-table .slide .number-60 {
+  left: 60%;
+  text-align: center;
+}
+
+.stylist-table .slide .bar-75 {
+  width: 75%;
+}
+
+.stylist-table .slide .number-75 {
+  left: 75%;
+  text-align: center;
 }
 
 @-webkit-keyframes example {
