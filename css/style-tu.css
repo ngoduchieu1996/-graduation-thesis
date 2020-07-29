@@ -11,7 +11,8 @@ li {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: black !important;
 }
 
 header {
@@ -21,17 +22,20 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 70px 15px;
+  padding: 0 10%;
 }
 
 .logo {
   width: 15%;
   height: auto;
+  position: relative;
 }
 
 .logo img {
-  width: 100%;
+  width: 200px;
   height: auto;
+  position: absolute;
+  top: 25%;
 }
 
 .nav-bar {
@@ -52,10 +56,11 @@ header {
 .title-a {
   text-decoration: none;
   display: block;
-  padding: 5px 20px;
+  padding: 30px 25px;
+  color: black !important;
 }
 
-dl, ol, ul {
+ul {
   margin-bottom: 0;
 }
 
@@ -68,6 +73,9 @@ dl, ol, ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .search-shop a {
@@ -98,6 +106,12 @@ dl, ol, ul {
   border-right: 1px solid gray;
 }
 
+.home .home-drop .title {
+  color: black;
+  font-size: 17px;
+  padding: 5px 20px;
+}
+
 .home .home-drop .title ~ a {
   font-size: 13px;
   color: gray;
@@ -105,14 +119,9 @@ dl, ol, ul {
   padding: 5px 20px;
 }
 
-.title {
-  color: black;
-  font-size: 15px;
-}
-
 .home:hover .home-drop {
   visibility: visible;
-  margin-top: 20px;
+  margin-top: 0px;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -237,6 +246,16 @@ dl, ol, ul {
   width: 25%;
 }
 
+.elements-drop div .title {
+  color: black;
+  font-size: 17px;
+  padding: 5px 20px;
+}
+
+.elements-drop div ul {
+  padding-left: 25px;
+}
+
 .elements-drop div ul a {
   font-size: 13px;
   color: gray;
@@ -355,10 +374,10 @@ footer .send-email .send {
 }
 
 .carousel-inner .carousel-item .content-img {
-  padding-bottom: 120px;
+  padding: 0 10% 11%;
 }
 
-.carousel-inner .carousel-item .content-img .title-img {
+.carousel-inner .carousel-item .content-img h1 {
   font-size: 70px;
   font-weight: 500;
   margin-bottom: 0;
@@ -409,6 +428,29 @@ footer .send-email .send {
   margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 992px) {
+  .start-now .circle {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .start-now .circle div {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .start-now .circle {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .start-now .circle div {
+    width: 80%;
+  }
+}
+
 .retina {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,7 +461,7 @@ footer .send-email .send {
 
 .retina img {
   display: block;
-  width: 519px;
+  width: 55%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -462,13 +504,41 @@ footer .send-email .send {
   border: none;
 }
 
+@media only screen and (max-width: 768px) {
+  .retina {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .retina img {
+    width: 100%;
+  }
+  .retina-content {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .retina {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .retina img {
+    width: 100%;
+  }
+  .retina-content {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .beautiful {
   background: url(../image/home-main-parallax-1.jpg);
   background-attachment: fixed;
   background-size: cover;
   min-height: 300px;
   text-align: center;
-  padding: 10% 280px;
+  padding: 10% 15%;
   color: white;
 }
 
@@ -497,10 +567,10 @@ footer .send-email .send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 150px 130px;
+  padding: 10%;
 }
 
-.stylist > div {
+.stylist-content, .stylist-table {
   width: 50%;
 }
 
@@ -516,6 +586,7 @@ footer .send-email .send {
 
 .stylist-content p {
   color: gray;
+  text-align: justify;
 }
 
 .stylist-table p {
@@ -583,6 +654,15 @@ footer .send-email .send {
   text-align: center;
 }
 
+.stylist-table .slide .bar-90 {
+  width: 90%;
+}
+
+.stylist-table .slide .number-90 {
+  left: 90%;
+  text-align: center;
+}
+
 @-webkit-keyframes example {
   0% {
     width: 0;
@@ -607,19 +687,28 @@ footer .send-email .send {
   }
 }
 
-.cell-art {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media only screen and (max-width: 992px) {
+  .stylist {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .stylist-content {
+    width: 100%;
+    margin: 0;
+  }
+  .stylist-table {
+    width: 100%;
+  }
+}
+
+.cell-art img {
+  width: 100% !important;
+  height: auto;
 }
 
 .cell-art a {
   padding: 0;
   position: relative;
-}
-
-.cell-art a img {
-  width: 100%;
-  height: auto;
 }
 
 .cell-art a div {
@@ -704,6 +793,15 @@ footer .send-email .send {
   color: #b1b1b1;
 }
 
+@media only screen and (max-width: 992px) {
+  .show-off div {
+    margin-bottom: 5%;
+  }
+  .show-off div img:first-child {
+    padding: 0 3%;
+  }
+}
+
 .beautiful-2 {
   text-align: center;
   background-color: #f0f0f0;
@@ -766,6 +864,25 @@ footer .send-email .send {
   text-align: left;
 }
 
+@media only screen and (max-width: 992px) {
+  .beautiful-2 .b2-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .beautiful-2 .b2-content .b2-content-img {
+    margin: 0 auto 5%;
+  }
+  .beautiful-2 .b2-content .b2-content-img img {
+    width: 100%;
+  }
+  .beautiful-2 .b2-content .b2-content-tb-p p {
+    text-align: justify;
+  }
+  .beautiful-2 .b2-content-tb {
+    padding-left: 0;
+  }
+}
+
 .easy-way {
   text-align: center;
   padding: 100px 0;
@@ -802,6 +919,22 @@ footer .send-email .send {
   transition: .2s;
   font-size: 10px;
   margin: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .easy-way .easy-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .easy-way .easy-content div {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 616px) {
+  .easy-way .easy-content div {
+    width: 100%;
+  }
 }
 
 .circle-2 {
@@ -890,7 +1023,7 @@ footer .send-email .send {
 }
 
 .buy-now p {
-  padding: 0 400px;
+  padding: 0 20%;
   font-size: 18px;
 }
 
@@ -1003,6 +1136,22 @@ footer .send-email .send {
 .ready p {
   color: gray;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 992px) {
+  .show-off2-content {
+    padding: 0 5%;
+  }
+  .show-off2-content a {
+    width: 40%;
+    margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .show-off2-content a {
+    width: 100%;
+  }
 }
 
 #feedback {

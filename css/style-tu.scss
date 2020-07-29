@@ -11,7 +11,8 @@ li {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: black !important;
 }
 
 // header start
@@ -19,15 +20,18 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 30px 70px 15px;
+    padding: 0 10%;
 }
 
 .logo {
     width: 15%;
     height: auto;
+    position: relative;
     img {
-        width: 100%;
+        width: 200px;
         height: auto;
+        position: absolute;
+        top: 25%;
     }
 }
 
@@ -46,10 +50,11 @@ header {
 .title-a {
     text-decoration: none;
     display: block;
-    padding: 5px 20px;
+    padding: 30px 25px;
+    color: black !important;
 }
 
-dl, ol, ul {
+ul {
     margin-bottom: 0;
 }
 
@@ -61,6 +66,7 @@ dl, ol, ul {
 
 .search-shop {
     display: flex;
+    align-items: center;
 }
 
 .search-shop a {
@@ -91,6 +97,12 @@ dl, ol, ul {
         .business, .announcement, .invitation {
             border-right: 1px solid gray;
         }
+
+        .title {
+            color: black;
+            font-size: 17px;
+            padding: 5px 20px;
+        }
     
         .title ~ a {
             font-size: 13px;
@@ -101,14 +113,11 @@ dl, ol, ul {
     }
 }
 
-.title {
-    color: black;
-    font-size: 15px;
-}
+
 
 .home:hover .home-drop {
     visibility: visible;
-    margin-top: 20px;
+    margin-top: 0px;
     transition: .2s;
 }
 
@@ -219,8 +228,21 @@ dl, ol, ul {
     @include up-bg();
     padding: 30px 0;
 
+   
+
     div {
         width: 25%;
+
+        .title {
+            color: black;
+            font-size: 17px;
+            padding: 5px 20px;
+        }
+
+        ul {
+            padding-left: 25px;
+            
+        }
         ul a {
             font-size: 13px;
             color: gray;
@@ -326,8 +348,8 @@ footer {
         
 
         .content-img {
-            padding-bottom: 120px;
-            .title-img {
+            padding: 0 10% 11%;
+            h1 {
                 font-size: 70px;
                 font-weight: 500;
                 margin-bottom: 0;
@@ -382,6 +404,31 @@ footer {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    .start-now {
+        .circle {
+            flex-wrap: wrap;
+            div {
+                width: 45%;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .start-now {
+        .circle {
+            flex-wrap: wrap;
+            justify-content: center;
+            div {
+                width: 80%;
+            }
+        }
+    }
+
+}
+
 // retina 
 
 .retina {
@@ -391,7 +438,7 @@ footer {
 
     img {
         display: block;
-        width: 519px;
+        width: 55%;
         height: auto;
         object-fit: contain;
     }
@@ -432,6 +479,33 @@ footer {
     border: none;
 }
 
+@media only screen and (max-width: 768px) {
+    .retina {
+        flex-wrap: wrap;
+        img {
+            width: 100%;
+        }
+
+        &-content {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .retina {
+        flex-wrap: wrap;
+        img {
+            width: 100%;
+        }
+
+        &-content {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
 // truly beautiful
 
 .beautiful {
@@ -440,7 +514,7 @@ footer {
     background-size: cover;
     min-height: 300px;
     text-align: center;
-    padding: 10% 280px;
+    padding: 10% 15%;
     color: white;
 
     h1 {
@@ -468,8 +542,8 @@ footer {
 
 .stylist {
     display: flex;
-    padding: 150px 130px;
-    > div {
+    padding: 10%;
+    &-content, &-table {
         width: 50%;
     }
 
@@ -483,6 +557,7 @@ footer {
 
         p {
             color: gray;
+            text-align: justify;
         }
     }
 
@@ -561,7 +636,7 @@ footer {
         
     }
 }
-
+}
 
 
 @keyframes example {
@@ -574,19 +649,34 @@ footer {
     0% {left: 0%;}
 }
 
+@media only screen and (max-width: 992px) {
+    .stylist {
+        flex-wrap: wrap;
+        &-content {
+            width: 100%;
+            margin: 0;
+        }
+
+        &-table {
+            width: 100%;
+        }
+    }
+}
+
+
 //cell art
 
 .cell-art {
-    flex-wrap: wrap;
+    img {
+        width: 100% !important;
+        height: auto;
+        
+    }
     a {
         padding: 0;
         position: relative;
         
-        img {
-            width: 100%;
-            height: auto;
-            
-        }
+      
 
         div {
             position: absolute;
@@ -663,6 +753,17 @@ footer {
         }
     }
 
+@media only screen and (max-width: 992px) {
+    .show-off {
+        div {
+            margin-bottom: 5%;
+            img:first-child {
+                padding: 0 3%;
+            }
+        }
+    }
+}
+
 
 .beautiful-2 {
     text-align: center;
@@ -725,6 +826,32 @@ footer {
         }
     }
 
+@media only screen and (max-width: 992px) {
+    .beautiful-2 {
+        .b2-content {
+            flex-wrap: wrap;
+            .b2-content-img {
+                margin: 0 auto 5%;
+                img {
+                    width: 100%;
+                }
+            }
+    
+            .b2-content-tb-p {
+                p {
+                    text-align: justify;
+                }
+            }
+
+            &-tb  {
+                padding-left: 0;
+            }
+        }
+        
+    }
+}
+
+
     .easy-way {
         text-align: center;
         padding: 100px 0;
@@ -757,6 +884,28 @@ footer {
             }
         }
     }
+
+@media only screen and (max-width: 992px) {
+    .easy-way {
+        .easy-content {
+            flex-wrap: wrap;
+            div {
+                width: 45%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 616px) {
+    .easy-way {
+        .easy-content {
+            div {
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 .circle-2 {
     padding: 50px 90px;
@@ -838,7 +987,7 @@ footer {
     }
 
     p {
-        padding:  0 400px;
+        padding: 0 20%;
         font-size: 18px;
     }
 }
@@ -942,6 +1091,28 @@ footer {
     p {
         color: gray;
         margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .show-off2 {
+        &-content {
+            padding: 0 5% ;
+            a {
+                width: 40%;
+                margin-right: 5%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .show-off2 {
+        &-content {
+            a {
+                width: 100%;
+            }
+        }
     }
 }
 
