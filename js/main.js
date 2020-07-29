@@ -14,7 +14,7 @@ function appr(a) {
 }
 
 $(document).ready(function () {
-    $(window).scroll(function () {
+    $(window).one('scroll',function () {
         if ($(document).scrollTop() >2000) {
             $('.event .number-slide').addClass('number-85');
             $('.event .slide-bar').addClass('bar-85');
@@ -56,15 +56,59 @@ $(document).ready(function () {
 
 function percent(a) {
     var n = 0;
-    var slide = document.querySelector('.event .number-slide');
-    var up = setInterval(increase, 30);
-    function increase() {
-        if (n == a) {
-            clearInterval(up);
-        } else {
-            n++;
-            slide.innerHTML = n + "%";
-        }
+    var event = document.querySelector('.event .number-slide');
+    var food = document.querySelector('.food .number-slide');
+    var guest = document.querySelector('.guest .number-slide');
+    var finding = document.querySelector('.finding .number-slide');
+    var up = setInterval(increase(a), 30);
+
+    switch (a) {
+        case 85:
+            function increase(a) {
+                if (n == a) {
+                    clearInterval(up);
+                } else {
+                    n++;
+                    event.innerHTML = n + "%";
+                }
+            }
+            break;
+
+        case 60:
+            function increase(a) {
+                if (n == a) {
+                    clearInterval(up);
+                } else {
+                    n++;
+                    food.innerHTML = n + "%";
+                }
+            }
+            break;
+
+        case 75:
+            function increase(a) {
+                if (n == a) {
+                    clearInterval(up);
+                } else {
+                    n++;
+                    guest.innerHTML = n + "%";
+                }
+            }
+            break;
+
+        case 90:
+            function increase(a) {
+                if (n == a) {
+                    clearInterval(up);
+                } else {
+                    n++;
+                    finding.innerHTML = n + "%";
+                }
+            }
+            break;
+    
+        default:
+            break;
     }
 }
 
