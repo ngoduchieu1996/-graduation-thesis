@@ -118,3 +118,16 @@ $(document).ready(function () {
     $('.p3').css('left','50%');
   });
 });
+
+
+$(document).ready(function() {
+  $('.nav-bar-rp').click(function() {
+    $('.bar').slideToggle();
+  });
+});
+
+$(document).ready(function() {
+  $('.home').click(function() {
+    $('.home-drop').slideToggle();
+  });
+});

@@ -6,6 +6,10 @@
   outline: none;
 }
 
+.container-fluid {
+  overflow: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -23,6 +27,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 10%;
+  height: 80px;
 }
 
 .logo {
@@ -50,13 +55,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 70%;
 }
 
 .title-a {
   text-decoration: none;
   display: block;
-  padding: 30px 25px;
+  padding: 25px;
   color: black !important;
 }
 
@@ -119,13 +123,6 @@ ul {
   padding: 5px 20px;
 }
 
-.home:hover .home-drop {
-  visibility: visible;
-  margin-top: 0px;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
 .page .page-drop {
   position: absolute;
   visibility: hidden;
@@ -138,6 +135,10 @@ ul {
 
 .page .page-drop a {
   font-size: 13px;
+}
+
+.page .page-drop li {
+  padding: 5px 35px;
 }
 
 .page:hover .page-drop {
@@ -167,6 +168,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   width: 200px;
+  padding: 5px 35px;
 }
 
 .portfolio-drop img {
@@ -186,7 +188,7 @@ ul {
   margin-top: 0;
 }
 
-.shop-drop, .blog-drop {
+.shop-drop {
   right: 0;
   font-size: 13px;
   position: absolute;
@@ -194,16 +196,21 @@ ul {
   margin-top: 30px;
   line-height: 2;
   visibility: hidden;
-  width: 150px;
+  width: 180px;
   background-color: white;
   z-index: 1;
+}
+
+.shop-drop a {
+  padding: 5px 35px;
+  display: block;
 }
 
 .shop {
   position: relative;
 }
 
-.shop:hover .shop-drop, .shop:hover .blog-drop {
+.shop:hover .shop-drop {
   visibility: visible;
   margin-top: 0;
   -webkit-transition: .3s;
@@ -215,9 +222,21 @@ ul {
 }
 
 .blog-drop {
-  width: 200px;
+  width: 230px;
+  right: 0;
+  font-size: 13px;
+  position: absolute;
+  text-align: right;
+  margin-top: 30px;
+  line-height: 2;
+  visibility: hidden;
   background-color: white;
   z-index: 1;
+}
+
+.blog-drop a {
+  padding: 5px 35px;
+  display: block;
 }
 
 .blog:hover .blog-drop {
@@ -276,6 +295,111 @@ ul {
   margin-top: 0;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+.nav-bar-rp {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border: 1px solid gray;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 20px;
+  border-radius: 999px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 993px) {
+  .home:hover .home-drop {
+    visibility: visible;
+    margin-top: 0px;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  header {
+    position: relative;
+  }
+  header .nav-bar-rp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .logo {
+    margin: 0 auto;
+  }
+  header .bar {
+    display: none;
+    position: absolute;
+    background: white;
+    height: 330px;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  header .bar nav {
+    width: 100%;
+  }
+  header .bar nav .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    /* border-right: 1px solid #dfdfdf; */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
+  }
+  header .bar nav .nav-bar li {
+    width: 100%;
+  }
+  header .bar nav .nav-bar .title-a {
+    padding: 15px 25px;
+    border-top: 1px solid;
+  }
+  header .bar nav .nav-bar .home-drop, header .bar nav .nav-bar .page-drop, header .bar nav .nav-bar .portfolio-drop, header .bar nav .nav-bar .shop-drop, header .bar nav .nav-bar .blog-drop, header .bar nav .nav-bar .elements-drop {
+    margin-top: 0;
+  }
+  header .bar nav .nav-bar .home-drop {
+    left: 0;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    z-index: 2;
+    background: #dddddd;
+  }
+  header .bar nav .nav-bar .home-drop div {
+    width: 50%;
+  }
+  header .bar .search-shop {
+    position: relative;
+    height: 20%;
+    background: white;
+    width: 100%;
+    border-top: 1px solid;
+  }
+  header .bar .search-shop a {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .bar nav .nav-bar .home-drop div {
+    width: 100%;
+  }
 }
 
 footer {
