@@ -13,6 +13,7 @@ function appr(a) {
     }
 }
 
+
 $(document).ready(function () {
     $(window).one('scroll',function () {
         if ($(document).scrollTop() >2000) {
@@ -95,4 +96,25 @@ $(document).ready(function () {
             }
           }
     });
+});
+
+$(document).ready(function () {
+  $('.p1').hover(function () {
+    $('.p2').css('left','50%');
+    $('.p3').css('left','75%');
+  });
+});
+
+$(document).ready(function () {
+  $('.p2').hover(function () {
+    $('.p2').css('left','25%');
+    $('.p3').css('left','75%');
+  });
+});
+
+$(document).ready(function () {
+  $('.p3').hover(function () {
+    $('.p2').css('left','25%');
+    $('.p3').css('left','50%');
+  });
 });

@@ -325,6 +325,26 @@ footer {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    footer {
+        flex-wrap: wrap;
+
+        >div {
+            width: 50%;
+            margin-bottom: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+
+        >div {
+            width: 100%;
+        }
+    }
+}
+
 //footer end
 
 //slide image
@@ -933,11 +953,31 @@ footer {
 }
 
 .adorable {
+    background-color: rgb(228, 228, 228);
+    padding: 5% 0;
+
+    > p, h3 {
+        text-align: center;
+    }
+
+    >p {
+        margin-bottom: 5%;
+    }
+
     &-content {
+        height: 350px;
+        position: relative;
         width: 80%;
+        overflow: hidden;
+        margin: auto;
+        
+        
+        
         > div {
+            position: absolute;
             width: 50%;
             display: flex;
+            padding: 10px;
 
             .pic {
                 width: 50%;
@@ -948,17 +988,68 @@ footer {
                 }
             }
 
+            
+
             .content {
                 width: 50%;
                 display: flex;
                 flex-direction: column;
-                padding: 10px 20px;
+                padding-top: 3%;
+                margin-left: 5%;
+
+                h5 {
+                    font-size: 18px;
+                }
+
+                .retina-btn {
+                    border: 1px solid;
+                    width: fit-content;
+                    padding: 5px 20px;
+                    font-size: 12px;
+                    }
+                }
+
+                .retina-btn:hover {
+                    border: none;
+                }
             }
         }
 
+        .p1 {
+            z-index: 1;
+            transition: .5s;
+        }
+
+        .p2 {
+            left: 25%;
+            z-index: 2;
+            transition: .5s;
+        }
+
+        .p3 {
+            left: 75%;
+            z-index: 3;
+            transition: .5s;
+        }
+
         
+}
+
+@media only screen and (max-width: 992px) {
+    .adorable {
+        
+        &-content {
+            overflow: visible;
+            height: fit-content;
+            div {
+                width: 100%;
+                left: 0;
+                position: static;
+            }
+        }
     }
 }
+
 
 .buy-now {
     height: 600px;
@@ -1092,6 +1183,10 @@ footer {
         color: gray;
         margin-bottom: 50px;
     }
+
+    img {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -1145,7 +1240,8 @@ footer {
             img {
                 width: 64px;
                 height: auto;
-            }
+           }
         }
     }
 }
+

@@ -351,6 +351,23 @@ footer .send-email .send {
   background: #4ff3ff;
 }
 
+@media only screen and (max-width: 992px) {
+  footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer > div {
+    width: 50%;
+    margin-bottom: 10%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer > div {
+    width: 100%;
+  }
+}
+
 #fade-img {
   height: 567px;
   overflow: hidden;
@@ -963,15 +980,34 @@ footer .send-email .send {
   border-radius: 999px;
 }
 
+.adorable {
+  background-color: #e4e4e4;
+  padding: 5% 0;
+}
+
+.adorable > p, .adorable h3 {
+  text-align: center;
+}
+
+.adorable > p {
+  margin-bottom: 5%;
+}
+
 .adorable-content {
+  height: 350px;
+  position: relative;
   width: 80%;
+  overflow: hidden;
+  margin: auto;
 }
 
 .adorable-content > div {
+  position: absolute;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 10px;
 }
 
 .adorable-content > div .pic {
@@ -993,7 +1029,59 @@ footer .send-email .send {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px 20px;
+  padding-top: 3%;
+  margin-left: 5%;
+}
+
+.adorable-content > div .content h5 {
+  font-size: 18px;
+}
+
+.adorable-content > div .content .retina-btn, .easy-way .easy-content .adorable-content > div .content a:hover {
+  border: 1px solid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 20px;
+  font-size: 12px;
+}
+
+.adorable-content > div .retina-btn:hover, .easy-way .easy-content .adorable-content > div a:hover {
+  border: none;
+}
+
+.adorable .p1 {
+  z-index: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.adorable .p2 {
+  left: 25%;
+  z-index: 2;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.adorable .p3 {
+  left: 75%;
+  z-index: 3;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media only screen and (max-width: 992px) {
+  .adorable-content {
+    overflow: visible;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .adorable-content div {
+    width: 100%;
+    left: 0;
+    position: static;
+  }
 }
 
 .buy-now {
@@ -1136,6 +1224,10 @@ footer .send-email .send {
 .ready p {
   color: gray;
   margin-bottom: 50px;
+}
+
+.ready img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 992px) {
