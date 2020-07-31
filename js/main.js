@@ -143,7 +143,7 @@ $(document).ready(function() {
 
 
 function myFunction(r) {
-  if (x.matches) {
+  if (r.matches) {
     $(document).ready(function() {
       $('.home').click(function() {
         $('.home-drop').slideToggle();
