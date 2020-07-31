@@ -13,39 +13,45 @@ function appr(a) {
     }
 }
 
-
+var i = 0;
 $(document).ready(function () {
-    $(window).one('scroll',function () {
-        if ($(window).scrollTop() >200) {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >2000) {
             $('.event .number-slide').addClass('number-85');
             $('.event .slide-bar').addClass('bar-85');
-            event();
+            for (;i < 1; i++) {
+              event();
+            }
+            
         }
 
         function event() {
-            var n = 0;
-            var event = document.getElementById("event");
-            var up = setInterval(increase, 25);
-            function increase() {
-              if (n == 85) {
-                clearInterval(up);
-              } else {
-                n++;
-                event.innerHTML = n + "%";
-              }
+          var n = 0;
+          var event = document.getElementById("event");
+          var up = setInterval(increase, 30);
+          function increase() {
+            if (n == 85) {
+              clearInterval(up);
+            } else {
+              n++;
+              event.innerHTML = n + "%";
             }
           }
+        }
 
-        if ($(window).scrollTop() > 200) {
+        if ($(window).scrollTop() > 2050) {
             $('.food .number-slide').addClass('number-60');
             $('.food .slide-bar').addClass('bar-60');
-            food();
+            
+            for (;i < 2; i++) {
+              food();
+            }
         }
 
         function food() {
             var n = 0;
             var event = document.getElementById("food");
-            var up = setInterval(increase, 25);
+            var up = setInterval(increase, 30);
             function increase() {
               if (n == 60) {
                 clearInterval(up);
@@ -56,15 +62,18 @@ $(document).ready(function () {
             }
           }
 
-        if ($(window).scrollTop() >2040) {
+        if ($(window).scrollTop() >2100) {
             $('.guest .number-slide').addClass('number-75');
             $('.guest .slide-bar').addClass('bar-75');
-            guest();
+            
+            for (;i < 3; i++) {
+              guest();
+            }
 
             function guest() {
                 var n = 0;
                 var event = document.getElementById("guest");
-                var up = setInterval(increase, 25);
+                var up = setInterval(increase, 30);
                 function increase() {
                   if (n == 75) {
                     clearInterval(up);
@@ -76,16 +85,19 @@ $(document).ready(function () {
               }
         }
 
-        if ($(window).scrollTop() >2060) {
+        if ($(window).scrollTop() >2150) {
             $('.finding .number-slide').addClass('number-90');
             $('.finding .slide-bar').addClass('bar-90');
-            finding();
+            
+            for (;i < 4; i++) {
+              finding();
+            }
         }
 
         function finding() {
             var n = 0;
             var event = document.getElementById("finding");
-            var up = setInterval(increase, 25);
+            var up = setInterval(increase, 30);
             function increase() {
               if (n == 90) {
                 clearInterval(up);
@@ -95,6 +107,8 @@ $(document).ready(function () {
               }
             }
           }
+
+        
     });
 });
 
@@ -128,7 +142,7 @@ $(document).ready(function() {
 
 
 
-function myFunction(x) {
+function myFunction(r) {
   if (x.matches) {
     $(document).ready(function() {
       $('.home').click(function() {
@@ -167,6 +181,25 @@ function myFunction(x) {
   } 
 }
 
-var x = window.matchMedia("(max-width: 1080px)");
-myFunction(x);
-x.addListener(myFunction);
+var r = window.matchMedia("(max-width: 1080px)");
+myFunction(r);
+r.addListener(myFunction);
+
+$().ready(function() {
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 650) {
+      $('header').addClass('stick-h');
+    } else {
+      $('header').removeClass('stick-h');
+    }
+  });
+});
+
+$().ready(function() {
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      $('.start-now img').css('width','64px');
+      $('.start-now img').css('height','auto');
+    }
+  });
+});

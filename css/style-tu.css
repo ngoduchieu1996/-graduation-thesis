@@ -19,6 +19,14 @@ a {
   color: black !important;
 }
 
+.stick-h {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: white;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,6 +36,8 @@ header {
           justify-content: space-between;
   padding: 0 10%;
   height: 80px;
+  -webkit-transition: 5s;
+  transition: 5s;
 }
 
 .logo {
@@ -645,6 +655,9 @@ footer .send-email .send {
 
 .start-now .circle img {
   margin-bottom: 40px;
+  width: 0px;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 @media only screen and (max-width: 992px) {
@@ -832,8 +845,8 @@ footer .send-email .send {
   position: absolute;
   -webkit-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  -webkit-animation: example1 5s;
-          animation: example1 5s;
+  -webkit-animation: example1 8s;
+          animation: example1 8s;
   bottom: 20px;
 }
 
@@ -842,8 +855,8 @@ footer .send-email .send {
   height: 20px;
   background: rgba(255, 202, 212, 0.705);
   left: 0;
-  -webkit-animation: example 5s;
-          animation: example 5s;
+  -webkit-animation: example 8s;
+          animation: example 8s;
 }
 
 .stylist-table .slide .bar-85 {

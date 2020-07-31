@@ -20,11 +20,20 @@ a {
 
 // header start
 
+.stick-h {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: white;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 0 10%;
     height: 80px;
+    transition: 5s;
 }
 
 .logo {
@@ -682,6 +691,8 @@ footer {
 
         img {
             margin-bottom: 40px;
+            width: 0px;
+            transition: .5s;
         }
     }
 }
@@ -864,7 +875,7 @@ footer {
                 width: 35px;
                 position: absolute;
                 transform: translate(-50%,0%);
-                animation: example1 5s;
+                animation: example1 8s;
                 bottom: 20px;
             }
 
@@ -873,7 +884,7 @@ footer {
                 height: 20px;
                 background: rgba(255, 202, 212, 0.705);
                 left: 0;
-                animation: example 5s ;
+                animation: example 8s ;
             }
 
             .bar-85 {
