@@ -87,8 +87,8 @@ ul {
         width: 70%;
         left: 15%;
         display: flex;
-        margin-top: 50px;
         visibility: hidden;
+        margin-top: 50px;
         background-color: white;
         @include up-bg();
         div {
@@ -111,7 +111,7 @@ ul {
             font-size: 13px;
             color: gray;
             display: block;
-            padding: 5px 20px;
+            padding: 12px 20px;
         }
     }
 }
@@ -138,11 +138,7 @@ ul {
     }
 }
 
-.page:hover .page-drop {
-    visibility: visible;
-    transition: .3s;
-    margin-top: 0;
-}
+
 
 .portfolio-drop {
     visibility: hidden;
@@ -156,12 +152,12 @@ ul {
         justify-content: space-between ;
         align-items: center;
         width: 200px;
-        padding: 5px 35px;
+        padding: 10px 35px;
     }
 
     img {
-        width: 10%;
-        height: 10%;
+        width: 10px;
+        height: auto;
     }
 
     p {
@@ -172,11 +168,7 @@ ul {
     
 } 
 
-.portfolio:hover .portfolio-drop {
-    transition: 0.3s;
-    visibility: visible;
-    margin-top: 0 ;
-}
+
 
 
 .shop-drop {
@@ -191,7 +183,7 @@ ul {
     @include up-bg();
 
     a {
-        padding: 5px 35px;
+        padding: 10px 35px;
         display: block;
     }
 }
@@ -201,19 +193,11 @@ ul {
     
 }
 
-.shop:hover .shop-drop {
-        visibility: visible;
-        margin-top: 0;
-        transition: .3s;
-}
 
 
 
-@mixin effect-drop {
-    visibility: visible;
-    margin-top: 0;
-    transition: .3s;
-}
+
+
 
 .blog { 
     position: relative;
@@ -235,9 +219,7 @@ ul {
     }
 }
 
-.blog:hover .blog-drop {
-    @include effect-drop();
-}
+
 
 .elements-drop {
     position: absolute;
@@ -268,6 +250,9 @@ ul {
         ul a {
             font-size: 13px;
             color: gray;
+            display: block;
+            padding: 10px 0;
+
             img {
                 width: 13px;
                 height: auto;
@@ -280,9 +265,7 @@ ul {
     }
 }
 
-.elements:hover .elements-drop {
-    @include effect-drop();
-}
+
 
 .nav-bar-rp {
     transform: rotate(90deg);
@@ -298,15 +281,47 @@ ul {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1081px) {
+    @mixin effect-drop {
+        visibility: visible;
+        margin-top: 0;
+        transition: .3s;
+    }
+
     .home:hover .home-drop {
         visibility: visible;
         margin-top: 0px;
         transition: .2s;
     }
+
+    .page:hover .page-drop {
+        visibility: visible;
+        transition: .3s;
+        margin-top: 0;
+    }
+
+    .portfolio:hover .portfolio-drop {
+        transition: 0.3s;
+        visibility: visible;
+        margin-top: 0 ;
+    }
+
+    .shop:hover .shop-drop {
+        visibility: visible;
+        margin-top: 0;
+        transition: .3s;
+    }
+
+    .blog:hover .blog-drop {
+        @include effect-drop();
+    }
+
+    .elements:hover .elements-drop {
+        @include effect-drop();
+    }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1080px) {
     header {
         position: relative;
         .nav-bar-rp {
@@ -336,6 +351,7 @@ ul {
                     /* border-right: 1px solid #dfdfdf; */
                     flex-wrap: wrap;
                     position: relative;
+                    background-color: white;
     
                     li {
                         width: 100%;
@@ -344,25 +360,96 @@ ul {
                     .title-a {
                         padding: 15px 25px;
                         border-top: 1px solid;
+                        cursor: pointer;
                     }
 
                     .home-drop, .page-drop, .portfolio-drop, .shop-drop, .blog-drop, .elements-drop {
                         margin-top: 0;
                     }
 
-                    .home:hover .home-drop {
-
-                    }
+                    
 
                     .home-drop {
+                        position: relative;
                         left: 0;
                         width: 100%;
-                        flex-wrap: wrap;
-                        z-index: 2;
-                        background: rgb(221, 221, 221);
+                        z-index: 20;
+                        background: rgb(250, 250, 250);
+                        visibility: visible;
+                        display: none;
 
                         div {
-                            width: 50%;
+                            width: 45%;
+                            display: inline-grid;
+                        }
+
+                        .announcement {
+                            border-right: none;
+                        }
+                    }
+
+                    .page-drop {
+                        position: relative;
+                        width: 100%;
+                        visibility: visible;
+                        display: none;
+                        
+                        li {
+                            border-bottom: 1px solid;
+                        }
+                    }
+
+                    .portfolio-drop {
+                        position: relative;
+                        visibility: visible;
+                        display: none;
+                        width: 100%;
+
+                        a {
+                            width: 100%;
+                            border-bottom: 1px solid;
+                        }
+                    }
+
+                    .shop-drop {
+                        position: relative;
+                        visibility: visible;
+                        display: none;
+                        width: 100%;
+                        text-align: left;
+
+                        a {
+                            border-bottom: 1px solid;
+                        }
+                    }
+
+                    .blog-drop {
+                        position: relative;
+                        visibility: visible;
+                        display: none;
+                        width: 100%;
+                        text-align: left;
+                        a {
+                            border-bottom: 1px solid;
+                            padding: 10px 35px;
+                        }
+                    }
+
+                    .elements-drop {
+                        position: relative;
+                        visibility: visible;
+                        display: none;
+                        width: 100%;
+                        left: 0;
+
+                        div {
+                            width: 45%;
+                            display: inline-block;
+                            margin-bottom: 25px;
+
+                            li {
+                                border-bottom: 1px solid;
+                            }
                         }
                     }
                 }
@@ -389,6 +476,16 @@ ul {
             nav {
                 .nav-bar {
                     .home-drop {
+                        div {
+                            width: 100%;
+                            a {
+                                border-bottom: 1px solid;
+                            }
+                        }
+                    }
+
+                    .elements-drop {
+
                         div {
                             width: 100%;
                         }
@@ -531,6 +628,34 @@ footer {
 
 .content-img p:nth-child(3) {
     padding: 0px 180px;
+}
+
+@media only screen and (max-width: 992px) {
+    .carousel-inner {
+        .carousel-item {
+            .content-img {
+                h1 {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-inner {
+        .carousel-item {
+            .content-img {
+                h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+
+    
 }
 
 //start now

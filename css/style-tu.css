@@ -93,8 +93,8 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 50px;
   visibility: hidden;
+  margin-top: 50px;
   background-color: white;
   background-color: white;
   z-index: 1;
@@ -120,7 +120,7 @@ ul {
   font-size: 13px;
   color: gray;
   display: block;
-  padding: 5px 20px;
+  padding: 12px 20px;
 }
 
 .page .page-drop {
@@ -139,13 +139,6 @@ ul {
 
 .page .page-drop li {
   padding: 5px 35px;
-}
-
-.page:hover .page-drop {
-  visibility: visible;
-  -webkit-transition: .3s;
-  transition: .3s;
-  margin-top: 0;
 }
 
 .portfolio-drop {
@@ -168,24 +161,17 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   width: 200px;
-  padding: 5px 35px;
+  padding: 10px 35px;
 }
 
 .portfolio-drop img {
-  width: 10%;
-  height: 10%;
+  width: 10px;
+  height: auto;
 }
 
 .portfolio-drop p {
   margin-bottom: 0;
   font-size: 13px;
-}
-
-.portfolio:hover .portfolio-drop {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  visibility: visible;
-  margin-top: 0;
 }
 
 .shop-drop {
@@ -202,19 +188,12 @@ ul {
 }
 
 .shop-drop a {
-  padding: 5px 35px;
+  padding: 10px 35px;
   display: block;
 }
 
 .shop {
   position: relative;
-}
-
-.shop:hover .shop-drop {
-  visibility: visible;
-  margin-top: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .blog {
@@ -237,13 +216,6 @@ ul {
 .blog-drop a {
   padding: 5px 35px;
   display: block;
-}
-
-.blog:hover .blog-drop {
-  visibility: visible;
-  margin-top: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .elements-drop {
@@ -278,6 +250,8 @@ ul {
 .elements-drop div ul a {
   font-size: 13px;
   color: gray;
+  display: block;
+  padding: 10px 0;
 }
 
 .elements-drop div ul a img {
@@ -288,13 +262,6 @@ ul {
 
 .elements-drop .typography, .elements-drop .infographics, .elements-drop .s-elements {
   border-right: 1px solid lightgray;
-}
-
-.elements:hover .elements-drop {
-  visibility: visible;
-  margin-top: 0;
-  -webkit-transition: .3s;
-  transition: .3s;
 }
 
 .nav-bar-rp {
@@ -316,16 +283,46 @@ ul {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1081px) {
   .home:hover .home-drop {
     visibility: visible;
     margin-top: 0px;
     -webkit-transition: .2s;
     transition: .2s;
   }
+  .page:hover .page-drop {
+    visibility: visible;
+    -webkit-transition: .3s;
+    transition: .3s;
+    margin-top: 0;
+  }
+  .portfolio:hover .portfolio-drop {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    visibility: visible;
+    margin-top: 0;
+  }
+  .shop:hover .shop-drop {
+    visibility: visible;
+    margin-top: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .blog:hover .blog-drop {
+    visibility: visible;
+    margin-top: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .elements:hover .elements-drop {
+    visibility: visible;
+    margin-top: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1080px) {
   header {
     position: relative;
   }
@@ -361,6 +358,7 @@ ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     position: relative;
+    background-color: white;
   }
   header .bar nav .nav-bar li {
     width: 100%;
@@ -368,20 +366,82 @@ ul {
   header .bar nav .nav-bar .title-a {
     padding: 15px 25px;
     border-top: 1px solid;
+    cursor: pointer;
   }
   header .bar nav .nav-bar .home-drop, header .bar nav .nav-bar .page-drop, header .bar nav .nav-bar .portfolio-drop, header .bar nav .nav-bar .shop-drop, header .bar nav .nav-bar .blog-drop, header .bar nav .nav-bar .elements-drop {
     margin-top: 0;
   }
   header .bar nav .nav-bar .home-drop {
+    position: relative;
     left: 0;
     width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    z-index: 2;
-    background: #dddddd;
+    z-index: 20;
+    background: #fafafa;
+    visibility: visible;
+    display: none;
   }
   header .bar nav .nav-bar .home-drop div {
-    width: 50%;
+    width: 45%;
+    display: -ms-inline-grid;
+    display: inline-grid;
+  }
+  header .bar nav .nav-bar .home-drop .announcement {
+    border-right: none;
+  }
+  header .bar nav .nav-bar .page-drop {
+    position: relative;
+    width: 100%;
+    visibility: visible;
+    display: none;
+  }
+  header .bar nav .nav-bar .page-drop li {
+    border-bottom: 1px solid;
+  }
+  header .bar nav .nav-bar .portfolio-drop {
+    position: relative;
+    visibility: visible;
+    display: none;
+    width: 100%;
+  }
+  header .bar nav .nav-bar .portfolio-drop a {
+    width: 100%;
+    border-bottom: 1px solid;
+  }
+  header .bar nav .nav-bar .shop-drop {
+    position: relative;
+    visibility: visible;
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+  header .bar nav .nav-bar .shop-drop a {
+    border-bottom: 1px solid;
+  }
+  header .bar nav .nav-bar .blog-drop {
+    position: relative;
+    visibility: visible;
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+  header .bar nav .nav-bar .blog-drop a {
+    border-bottom: 1px solid;
+    padding: 10px 35px;
+  }
+  header .bar nav .nav-bar .elements-drop {
+    position: relative;
+    visibility: visible;
+    display: none;
+    width: 100%;
+    left: 0;
+  }
+  header .bar nav .nav-bar .elements-drop div {
+    width: 45%;
+    display: inline-block;
+    margin-bottom: 25px;
+  }
+  header .bar nav .nav-bar .elements-drop div li {
+    border-bottom: 1px solid;
   }
   header .bar .search-shop {
     position: relative;
@@ -398,6 +458,12 @@ ul {
 
 @media only screen and (max-width: 768px) {
   header .bar nav .nav-bar .home-drop div {
+    width: 100%;
+  }
+  header .bar nav .nav-bar .home-drop div a {
+    border-bottom: 1px solid;
+  }
+  header .bar nav .nav-bar .elements-drop div {
     width: 100%;
   }
 }
@@ -539,6 +605,18 @@ footer .send-email .send {
 
 .content-img p:nth-child(3) {
   padding: 0px 180px;
+}
+
+@media only screen and (max-width: 992px) {
+  .carousel-inner .carousel-item .content-img h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-inner .carousel-item .content-img h1 {
+    font-size: 50px;
+  }
 }
 
 .start-now {

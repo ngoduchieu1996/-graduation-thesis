@@ -16,7 +16,7 @@ function appr(a) {
 
 $(document).ready(function () {
     $(window).one('scroll',function () {
-        if ($(document).scrollTop() >2000) {
+        if ($(window).scrollTop() >200) {
             $('.event .number-slide').addClass('number-85');
             $('.event .slide-bar').addClass('bar-85');
             event();
@@ -36,7 +36,7 @@ $(document).ready(function () {
             }
           }
 
-        if ($(document).scrollTop() >2020) {
+        if ($(window).scrollTop() > 200) {
             $('.food .number-slide').addClass('number-60');
             $('.food .slide-bar').addClass('bar-60');
             food();
@@ -56,7 +56,7 @@ $(document).ready(function () {
             }
           }
 
-        if ($(document).scrollTop() >2040) {
+        if ($(window).scrollTop() >2040) {
             $('.guest .number-slide').addClass('number-75');
             $('.guest .slide-bar').addClass('bar-75');
             guest();
@@ -76,7 +76,7 @@ $(document).ready(function () {
               }
         }
 
-        if ($(document).scrollTop() >2060) {
+        if ($(window).scrollTop() >2060) {
             $('.finding .number-slide').addClass('number-90');
             $('.finding .slide-bar').addClass('bar-90');
             finding();
@@ -126,8 +126,47 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  $('.home').click(function() {
-    $('.home-drop').slideToggle();
-  });
-});
+
+
+function myFunction(x) {
+  if (x.matches) {
+    $(document).ready(function() {
+      $('.home').click(function() {
+        $('.home-drop').slideToggle();
+        $('.home-drop').css('visibility','visible');
+        
+      });
+
+      $('.page').click(function() {
+        $('.page-drop').slideToggle();
+        $('.page-drop').css('visibility','visible');
+      });
+
+      $('.portfolio').click(function() {
+        $('.portfolio-drop').slideToggle();
+        $('.portfolio-drop').css('visibility','visible');
+      });
+
+      $('.shop').click(function() {
+        $('.shop-drop').slideToggle();
+        $('.shop-drop').css('visibility','visible');
+      });
+
+      $('.blog').click(function() {
+        $('.blog-drop').slideToggle();
+        $('.blog-drop').css('visibility','visible');
+      });
+
+      $('.elements').click(function() {
+        $('.elements-drop').slideToggle();
+        $('.elements-drop').css('visibility','visible');
+        
+      });
+
+    });
+  } 
+}
+
+var x = window.matchMedia("(max-width: 1080px)");
+myFunction(x);
+x.addListener(myFunction);
