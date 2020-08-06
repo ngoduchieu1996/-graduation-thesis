@@ -19,14 +19,6 @@ a {
   color: black !important;
 }
 
-.stick-h {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-  background-color: white;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,8 +28,13 @@ header {
           justify-content: space-between;
   padding: 0 10%;
   height: 80px;
-  -webkit-transition: 5s;
-  transition: 5s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 5;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .logo {

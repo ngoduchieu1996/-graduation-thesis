@@ -20,20 +20,17 @@ a {
 
 // header start
 
-.stick-h {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-    background-color: white;
-}
-
 header {
     display: flex;
     justify-content: space-between;
     padding: 0 10%;
     height: 80px;
-    transition: 5s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 5;
+    transition: .3s;
 }
 
 .logo {

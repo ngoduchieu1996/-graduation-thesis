@@ -185,15 +185,6 @@ var r = window.matchMedia("(max-width: 1080px)");
 myFunction(r);
 r.addListener(myFunction);
 
-$().ready(function() {
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 650) {
-      $('header').addClass('stick-h');
-    } else {
-      $('header').removeClass('stick-h');
-    }
-  });
-});
 
 $().ready(function() {
   $(window).scroll(function() {
@@ -203,3 +194,14 @@ $().ready(function() {
     }
   });
 });
+
+
+window.onscroll =  function() {slideDown()};
+
+function slideDown() {
+  if (document.documentElement.scrollTop < 20 || document.documentElement.scrollTop > 600) {
+    document.getElementById('header').style.top = "0";
+  } else {
+    document.getElementById('header').style.top = "-80px";
+  }
+}
