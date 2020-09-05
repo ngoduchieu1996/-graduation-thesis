@@ -112,6 +112,8 @@ $(document).ready(function () {
     });
 });
 
+
+// slide ảnh phần Adorable
 $(document).ready(function () {
   $('.p1').hover(function () {
     $('.p2').css('left','50%');
@@ -133,7 +135,7 @@ $(document).ready(function () {
   });
 });
 
-
+// menu slide ở tablet và mobile
 $(document).ready(function() {
   $('.nav-bar-rp').click(function() {
     $('.bar').slideToggle();
